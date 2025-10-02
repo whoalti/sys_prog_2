@@ -1,0 +1,31 @@
+# Приклад з різними типами чисел
+@version = 1.5
+@id = 0x2f
+@legacy_id = 007
+@normal_id = 123
+
+j = 2
+class User
+  @@count = 0
+
+  def initialize(name)
+    @name = name
+    $last_user = @name
+    @@count += 1
+    @@count += 1.5
+    @count = 0x2f
+    puts "Welcome, #{@name}!" # simple string
+  end
+
+  def self.count
+    @@count
+  end
+end
+
+user1 = User.new("Alice")
+puts User.count # Output: 1
+
+# Це однорядковий коментар
+(1..5).each do |i|
+  puts i
+end
