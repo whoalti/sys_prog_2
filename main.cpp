@@ -256,9 +256,13 @@ void printTokens(const std::vector<Token>& tokens) {
 
 
 int main() {
-    std::ifstream file("ruby_code.txt");
+    std::string filename;
+    std::cout << "Enter the name of the file to read from: ";
+    std::cin >> filename;
+
+    std::ifstream file(filename);
     if (!file.is_open()) {
-        std::cerr << "Error: Unable to open ruby_code.txt" << std::endl;
+        std::cerr << "Error: Unable to open " << filename << std::endl;
         return 1;
     }
 
