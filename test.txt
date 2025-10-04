@@ -1,0 +1,15 @@
+# Приклад з різними типами чисел
+@version = 1.5
+@id = 0x2f2313d
+@legacy_id = 007
+@normal_id = 123
+
+j = 2
+class User
+  @@count = 0
+
+  def initialize(name)
+    @name = name
+
+
+
